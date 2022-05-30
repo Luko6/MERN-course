@@ -1,6 +1,6 @@
 const axios = require("axios");
 const HttpError = require("../models/http-error");
-const GOOGLE_API_KEY = require("../../secrets");
+const { GOOGLE_API_KEY } = require("../../secrets");
 
 const API_KEY = GOOGLE_API_KEY;
 

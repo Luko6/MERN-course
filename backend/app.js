@@ -1,9 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 
 const usersRoutes = require("./routes/users-routes");
 const placesRoutes = require("./routes/places-routes");
 const HttpError = require("./models/http-error");
+const { MONGO_URL } = require("../secrets");
 
 const app = express();
 
@@ -26,4 +28,11 @@ app.use((error, req, res, next) => {
   res.json({ message: error.message || "An unknown error occured!" });
 });
 
-app.listen(5000);
+mongoose
+  .connect(MONGO_URL)
+  .then(() => {
+    app.listen(5000);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
