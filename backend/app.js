@@ -29,7 +29,8 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(MONGO_URL)
+  // These options are needed because of the downgrade to mongoose 5.
+  .connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     app.listen(5000);
   })
