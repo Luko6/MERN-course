@@ -1,14 +1,16 @@
-import React from "react";
-import UsersList from "../components/UsersList";
+import React from 'react';
+
+import UsersList from '../components/UsersList';
 
 const Users = () => {
-  const DANNY =
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Danny_DeVito_by_Gage_Skidmore.jpg/1200px-Danny_DeVito_by_Gage_Skidmore.jpg";
-
   const USERS = [
-    { id: "u1", image: DANNY, name: "John Doe", places: 6 },
-    { id: "u2", image: DANNY, name: "Danny Doe", places: 9 },
-    { id: "u3", image: DANNY, name: "Bobby Doe", places: 1 },
+    {
+      id: 'u1',
+      name: 'Max Schwarz',
+      image:
+        'https://images.pexels.com/photos/839011/pexels-photo-839011.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      places: 3
+    }
   ];
 
   return <UsersList items={USERS} />;

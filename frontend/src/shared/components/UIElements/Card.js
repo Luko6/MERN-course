@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Card.scss';
+import './Card.css';
 
 const Card = props => {
   return (

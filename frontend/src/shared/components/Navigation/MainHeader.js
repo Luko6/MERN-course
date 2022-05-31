@@ -1,7 +1,8 @@
-import React from "react";
-import "./MainHeader.scss";
+import React from 'react';
 
-const MainHeader = (props) => {
+import './MainHeader.css';
+
+const MainHeader = props => {
   return <header className="main-header">{props.children}</header>;
 };
 
